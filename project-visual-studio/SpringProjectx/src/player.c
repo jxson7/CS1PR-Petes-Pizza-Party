@@ -20,7 +20,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "common.h"
 
-static SDL_Texture *pete[2];
+static SDL_Texture* pete[2];
 
 void initPlayer(void)
 {
@@ -57,7 +57,7 @@ void doPlayer(void)
 		player->texture = pete[0];
 	}
 
-	if (app.keyboard[SDL_SCANCODE_I] && player->isOnGround)
+	if (app.keyboard[SDL_SCANCODE_W] && player->isOnGround)
 	{
 		player->riding = NULL;
 
@@ -66,10 +66,42 @@ void doPlayer(void)
 		playSound(SND_JUMP, CH_PLAYER);
 	}
 
-	if (app.keyboard[SDL_SCANCODE_SPACE])
+	if (app.keyboard[SDL_SCANCODE_R])
 	{
 		player->x = player->y = 0;
 
-		app.keyboard[SDL_SCANCODE_SPACE] = 0;
+		app.keyboard[SDL_SCANCODE_R] = 0;
+	}
+
+	// new code
+
+	if (app.keyboard[SDL_SCANCODE_LEFT])
+	{
+		player->dx = -PLAYER_MOVE_SPEED;
+
+		player->texture = pete[1];
+	}
+
+	if (app.keyboard[SDL_SCANCODE_RIGHT])
+	{
+		player->dx = PLAYER_MOVE_SPEED;
+
+		player->texture = pete[0];
+	}
+
+	if (app.keyboard[SDL_SCANCODE_SPACE] && player->isOnGround)
+	{
+		player->riding = NULL;
+
+		player->dy = -20;
+
+		playSound(SND_JUMP, CH_PLAYER);
+	}
+
+	if (app.keyboard[SDL_SCANCODE_R])
+	{
+		player->x = player->y = 0;
+
+		app.keyboard[SDL_SCANCODE_R] = 0;
 	}
 }

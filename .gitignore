@@ -1,3 +1,7 @@
 a.out
 *.o
 main
+/project-visual-studio/SpringProjectx/Debug/SpringProject.tlog
+/project-visual-studio/SpringProjectx/.vs/SpringProject/v16
+/.vs/SpringProject/v16
+/.vs

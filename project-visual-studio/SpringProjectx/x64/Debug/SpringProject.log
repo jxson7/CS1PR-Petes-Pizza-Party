@@ -1,0 +1,7 @@
+﻿  sound.c
+  LINK : 0 new modules and 1 (out of 54) modules have changed since prior linking
+  Starting pass 2
+       sound.obj
+       MSVCRTD.lib(loadcfg.obj)
+  Finished pass 2
+  SpringProject.vcxproj -> C:\Users\di918039\source\repos\cs1pr-portfolio\project-visual-studio\SpringProject\x64\Debug\SpringProject.exe

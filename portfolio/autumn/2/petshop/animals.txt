@@ -1,0 +1,8 @@
+Oscar,Cat,12
+Steve,Dog,7
+Fred,Snail,3
+Troy,Dog,2
+Larry,Ant,1
+Polly,Cat,15
+Erik,Cat,14
+Frank,Dog,11

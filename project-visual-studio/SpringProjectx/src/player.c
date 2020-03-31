@@ -104,4 +104,11 @@ void doPlayer(void)
 
 		app.keyboard[SDL_SCANCODE_R] = 0;
 	}
+
+	if (app.keyboard[SDL_SCANCODE_Q]) {
+		exit(3);
+		return 3;
+
+	}
+
 }

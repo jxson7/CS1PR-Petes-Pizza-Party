@@ -23,6 +23,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 static void logic(void);
 static void draw(void);
 static void drawHud(void);
+static void drawTimer(void);
+
+
 
 void initStage(void)
 {
@@ -59,6 +62,9 @@ static void draw(void)
 	drawEntities();
 
 	drawHud();
+
+	drawTimer();
+
 }
 
 static void drawHud(void)
@@ -76,4 +82,11 @@ static void drawHud(void)
 	SDL_SetRenderDrawBlendMode(app.renderer, SDL_BLENDMODE_NONE);
 
 	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
+}
+
+static void drawTimer(void)
+{
+	
+	drawText(SCREEN_WIDTH - 1080, 5, 255, 255, 255, TEXT_RIGHT, "TIMER %d/%d",stage.pizzaFound,stage.pizzaTotal);
+
 }

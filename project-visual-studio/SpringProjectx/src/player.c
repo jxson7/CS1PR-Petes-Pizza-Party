@@ -19,6 +19,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
 #include "common.h"
+#include <windows.h>
 
 static SDL_Texture* pete[2];
 
@@ -38,6 +39,7 @@ void initPlayer(void)
 
 	SDL_QueryTexture(player->texture, NULL, NULL, &player->w, &player->h);
 }
+
 
 void doPlayer(void)
 {
@@ -106,9 +108,17 @@ void doPlayer(void)
 	}
 
 	if (app.keyboard[SDL_SCANCODE_Q]) {
-		exit(3);
-		return 3;
+		MessageBox(NULL, (LPCWSTR)L"You are now exiting the game", (LPCWSTR)L"Exit",0);
+		if (0) {
+			return(3);
+			exit(3);
+
+		}
+		
+
+
+
+		}
 
 	}
 
-}

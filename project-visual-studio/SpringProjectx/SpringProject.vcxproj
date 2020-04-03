@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="src\block.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\draw.c" />
@@ -45,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SpringProject.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="todo.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

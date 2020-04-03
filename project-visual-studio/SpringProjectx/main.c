@@ -61,6 +61,7 @@ int WinMain(){
 	return 0;
 }
 
+
 static void capFrameRate(long* then, float* remainder)
 {
 	long wait, frameTime;

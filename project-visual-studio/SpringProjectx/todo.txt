@@ -1,0 +1,10 @@
+To Do List:
+// Components in background are optional 
+
+
+- Adding Timer hub
+- Adding new controls for user
+- Adding a help command button (bottom right for user support) 
+- Changing background 
+- (New Level)
+- (New Capture Elements)

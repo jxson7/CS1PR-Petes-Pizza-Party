@@ -1,4 +1,15 @@
-﻿  textures.c
+﻿  player.c
+C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\src\player.c(113,13): warning C4098: 'doPlayer': 'void' function returning a value
+  Source.cpp
+  LINK : New file: x64\Debug\Source.obj
+  LINK : 1 new modules and 1 (out of 54) modules have changed since prior linking
+  LINK : object file added; performing full link
+  
+  Invoking LINK.EXE:
+   /ERRORREPORT:PROMPT @C:\Users\jason\AppData\Local\Temp\tmp4b2664c250024807a675ab2b3cc5333e.rsp
+   /nologo
+   /incremental
+   /fullbuild
   
   Starting pass 1
   Processed /DEFAULTLIB:MSVCRTD
@@ -8,6 +19,18 @@
   Searching libraries
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\kernel32.lib:
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\user32.lib:
+        Found __imp_MessageBoxW
+          Referenced in player.obj
+          Loaded user32.lib(USER32.dll)
+        Found __IMPORT_DESCRIPTOR_USER32
+          Referenced in user32.lib(USER32.dll)
+          Loaded user32.lib(USER32.dll)
+        Found __NULL_IMPORT_DESCRIPTOR
+          Referenced in user32.lib(USER32.dll)
+          Loaded user32.lib(USER32.dll)
+        Found USER32_NULL_THUNK_DATA
+          Referenced in user32.lib(USER32.dll)
+          Loaded user32.lib(USER32.dll)
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\gdi32.lib:
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\winspool.lib:
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\comdlg32.lib:
@@ -114,9 +137,6 @@
           Referenced in sdl2.lib(SDL2.dll)
           Referenced in sdl2.lib(SDL2.dll)
           Referenced in sdl2.lib(SDL2.dll)
-          Referenced in sdl2.lib(SDL2.dll)
-          Loaded sdl2.lib(SDL2.dll)
-        Found __NULL_IMPORT_DESCRIPTOR
           Referenced in sdl2.lib(SDL2.dll)
           Loaded sdl2.lib(SDL2.dll)
         Found SDL2_NULL_THUNK_DATA
@@ -852,27 +872,27 @@
    /v
    /x
    /fo
-   "C:\Users\jason\AppData\Local\Temp\lnk{3A9ED06E-F3E9-4174-BAB8-A71B8C592D5C}.tmp"
-   "C:\Users\jason\AppData\Local\Temp\lnk{AE7DE01C-93BB-4FFE-98B9-1C3F8F4FF345}.tmp"
+   "C:\Users\jason\AppData\Local\Temp\lnk{395E3C6F-C16D-42EB-949D-5C643A682683}.tmp"
+   "C:\Users\jason\AppData\Local\Temp\lnk{A5FE7769-1107-4184-B287-D85A9B17D724}.tmp"
   Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
   
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   
-  Creating C:\Users\jason\AppData\Local\Temp\lnk{3A9ED06E-F3E9-4174-BAB8-A71B8C592D5C}.tmp
+  Creating C:\Users\jason\AppData\Local\Temp\lnk{395E3C6F-C16D-42EB-949D-5C643A682683}.tmp
   
   Using codepage 1252 as default
   
-  C:\Users\jason\AppData\Local\Temp\lnk{AE7DE01C-93BB-4FFE-98B9-1C3F8F4FF345}.tmp.
+  C:\Users\jason\AppData\Local\Temp\lnk{A5FE7769-1107-4184-B287-D85A9B17D724}.tmp.
   Writing 24:1,	lang:0x409,	size 381
   
   Invoking cvtres.exe:
    /machine:amd64
    /verbose
-   /out:"C:\Users\jason\AppData\Local\Temp\lnk{96264C32-981F-460B-A833-DD1A91A5CF88}.tmp"
+   /out:"C:\Users\jason\AppData\Local\Temp\lnk{949120F1-7DE7-407E-8F94-435B52E42C4A}.tmp"
    /readonly
    "x64\Debug\SpringProject.res"
-   "C:\Users\jason\AppData\Local\Temp\lnk{3A9ED06E-F3E9-4174-BAB8-A71B8C592D5C}.tmp"
+   "C:\Users\jason\AppData\Local\Temp\lnk{395E3C6F-C16D-42EB-949D-5C643A682683}.tmp"
   Microsoft (R) Windows Resource To Object Converter Version 14.24.28314.0
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
@@ -880,7 +900,6 @@
   
   
   Unused libraries:
-    C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\user32.lib
     C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\gdi32.lib
     C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\winspool.lib
     C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\um\x64\comdlg32.lib
@@ -913,6 +932,7 @@
        draw.obj
        camera.obj
        block.obj
+       Source.obj
        main.obj
        kernel32.lib(KERNEL32.dll)
        kernel32.lib(KERNEL32.dll)
@@ -942,7 +962,10 @@
        kernel32.lib(KERNEL32.dll)
        kernel32.lib(KERNEL32.dll)
        kernel32.lib(KERNEL32.dll)
-       sdl2.lib(SDL2.dll)
+       user32.lib(USER32.dll)
+       user32.lib(USER32.dll)
+       user32.lib(USER32.dll)
+       user32.lib(USER32.dll)
        sdl2.lib(SDL2.dll)
        sdl2.lib(SDL2.dll)
        sdl2.lib(SDL2.dll)

@@ -3,7 +3,7 @@ To Do List:
 
 
 - Adding Timer hub
-- Adding new controls for user
+- Adding new controls for user (COMPLETED)
 - Adding a help command button (bottom right for user support) 
 - Changing background 
 - (New Level)

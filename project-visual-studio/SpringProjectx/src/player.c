@@ -108,12 +108,17 @@ void doPlayer(void)
 	}
 
 	if (app.keyboard[SDL_SCANCODE_Q]) {
-		MessageBox(NULL, (LPCWSTR)L"You are now exiting the game", (LPCWSTR)L"Exit",0);
-		if (0) {
-			return(3);
-			exit(3);
+		exit(3);
+		return 3;
 
-		}
+		
+		
+		//MessageBox(NULL, (LPCWSTR)L"You are now exiting the game", (LPCWSTR)L"Exit",0);
+		//if (0) {
+		//return 3;
+		//exit(3);
+
+		//}
 		
 
 

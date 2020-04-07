@@ -20,69 +20,51 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "common.h"
 
-static void capFrameRate(long *then, float *remainder);
+static void logic(void);
+static void draw(void);
 
-int main(int argc, char *argv[])
+static SDL_Texture* sdl2Texture;
+static SDL_Texture* shooterTexture;
+static int reveal = 0;
+static int timeout;
+
+void initTitle(void)
 {
+	app.delegate.logic = logic;
+	app.delegate.draw = draw;
 
-	initTitle();
+	memset(app.keyboard, 0, sizeof(int) * MAX_KEYBOARD_KEYS);
 
-	long then;
-	float remainder;
+	sdl2Texture = loadTexture("gfx/pizza.png");
+	shooterTexture = loadTexture("gfx/pizzabackground.png");
 
-	memset(&app, 0, sizeof(App));
-	app.textureTail = &app.textureHead;
-
-	initSDL();
-
-	atexit(cleanup);
-
-	initGame();
-
-	initStage();
-
-	then = SDL_GetTicks();
-
-	remainder = 0;
-
-	while (1)
-	{
-		prepareScene();
-
-		doInput();
-
-		app.delegate.logic();
-
-		app.delegate.draw();
-
-		presentScene();
-
-		capFrameRate(&then, &remainder);
-	}
-
-	return 0;
 }
 
-static void capFrameRate(long *then, float *remainder)
+static void logic(void)
 {
-	long wait, frameTime;
+	drawMap();
 
-	wait = 16 + *remainder;
 
-	*remainder -= (int)*remainder;
-
-	frameTime = SDL_GetTicks() - *then;
-
-	wait -= frameTime;
-
-	if (wait < 1)
+	if (reveal < SCREEN_HEIGHT)
 	{
-		wait = 1;
+		reveal++;
 	}
 
-	SDL_Delay(wait);
-
-	*remainder += 0.667;
-
-	*then = SDL_GetTicks();
+	if (app.keyboard[SDL_SCANCODE_LCTRL])
+	{
+		initStage();
+	}
 }
+
+static void draw(void)
+{
+	drawMap();
+
+
+	if (timeout % 40 < 20)
+	{
+		drawText(SCREEN_WIDTH / 2, 600, 255, 255, 255, TEXT_CENTER, "PRESS CTRL TO PLAY!");
+	}
+}
+
+

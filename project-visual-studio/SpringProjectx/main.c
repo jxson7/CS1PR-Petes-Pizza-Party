@@ -28,6 +28,8 @@ int WinMain(){
 	long then;
 	float remainder;
 
+	
+
 	memset(&app, 0, sizeof(App));
 	app.textureTail = &app.textureHead;
 
@@ -35,9 +37,13 @@ int WinMain(){
 
 	atexit(cleanup);
 
-	initGame();
+	
 
-	initStage();
+	initGame();
+	initTitle();
+
+	
+	//initStage();
 
 	then = SDL_GetTicks();
 

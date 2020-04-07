@@ -1,23 +1,6 @@
 ﻿  homescreen.c
   LINK : 0 new modules and 1 (out of 56) modules have changed since prior linking
   Starting pass 2
-       util.obj
-       textures.obj
-       text.obj
-       stage.obj
-       sound.obj
-       player.obj
-       platform.obj
-       pizza.obj
-       map.obj
-       io.obj
-       input.obj
-       init.obj
-       entities.obj
-       draw.obj
-       camera.obj
-       block.obj
-       main.obj
        homescreen.obj
        MSVCRTD.lib(loadcfg.obj)
   Finished pass 2

@@ -57,9 +57,9 @@ void playSound(int id, int channel);
 void prepareScene(void);
 void presentScene(void);
 extern void blitRect(SDL_Texture* texture, SDL_Rect* src, int x, int y);
-extern void drawText(int x, int y, int r, int g, int b, int align, char* format, ...);
-extern void initStage(void);
-extern SDL_Texture* loadTexture(char* filename);
+//extern void drawText(int x, int y, int r, int g, int b, int align, char* format, ...);
+//extern void initStage(void);
+//extern SDL_Texture* loadTexture(char* filename);
 
 extern App app;
 

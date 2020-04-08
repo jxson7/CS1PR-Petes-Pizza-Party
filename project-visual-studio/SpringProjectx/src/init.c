@@ -42,7 +42,7 @@ void initSDL(void)
 
     Mix_AllocateChannels(MAX_SND_CHANNELS);
 
-	app.window = SDL_CreateWindow("Pete's Pizza Party 6", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, windowFlags);
+	app.window = SDL_CreateWindow("Pete's Pizza Delivery", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, windowFlags);
 
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 
@@ -50,7 +50,7 @@ void initSDL(void)
 
 	IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
 
-	SDL_ShowCursor(0);
+	SDL_ShowCursor(1);
 }
 
 void initGame(void)

@@ -72,9 +72,6 @@
     <ClCompile Include="homescreen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="map2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\structs.h">

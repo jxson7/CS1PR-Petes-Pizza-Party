@@ -33,6 +33,8 @@ void initMap(void)
 	loadTiles();
 
 	loadMap("data/map01.dat");
+	loadMap("data/map02.dat");
+
 }
 
 void drawMap(void)

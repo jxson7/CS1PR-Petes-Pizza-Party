@@ -22,6 +22,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 void initSDL(void)
 {
+	SDL_setenv("SDL_AUDIODRIVER", "winmm", 1);
+
 	int rendererFlags, windowFlags;
 
 	rendererFlags = SDL_RENDERER_ACCELERATED;
@@ -34,7 +36,7 @@ void initSDL(void)
 		exit(1);
 	}
 
-	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
+	if (Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
     {
         printf("Couldn't initialize SDL Mixer\n");
 		exit(1);

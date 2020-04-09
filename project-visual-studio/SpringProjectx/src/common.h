@@ -8,6 +8,7 @@ extern "C" {
 #include <ctype.h>
 #include <math.h>
 #include <SDL2/SDL.h>
+#undef main
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
 #include <stdio.h>

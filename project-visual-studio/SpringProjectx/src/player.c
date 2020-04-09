@@ -21,7 +21,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "common.h"
 #include <windows.h>
 
+
 static SDL_Texture* pete[2];
+static void messageboxYesNo(void);
+
 
 void initPlayer(void)
 {
@@ -108,22 +111,32 @@ void doPlayer(void)
 	}
 
 	if (app.keyboard[SDL_SCANCODE_Q]) {
-		exit(3);
-		return 3;
-
-		
-		
-		//MessageBox(NULL, (LPCWSTR)L"You are now exiting the game", (LPCWSTR)L"Exit",0);
-		//if (0) {
-		//return 3;
-		//exit(3);
-
-		//}
-		
-
-
-
+		messageboxYesNo();
 		}
+	}
+
+void messageboxYesNo(void) {
+	// referenced from https://wiki.libsdl.org/SDL_ShowMessageBox#Version
+
+	const SDL_MessageBoxButtonData buttons[] = {
+	{ SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT, 0, "No" },
+	{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 1, "Yes" },
+	};
+
+	const SDL_MessageBoxData messageboxdata = {
+		SDL_MESSAGEBOX_INFORMATION,NULL,"Exit Game","Do you wish to exit the game?",SDL_arraysize(buttons),buttons };
+	int buttonid;
+	if (SDL_ShowMessageBox(&messageboxdata, &buttonid) < 0) {
+		SDL_Log("error displaying message box");
+		return 1;
+	}
+	if (buttonid == 1) {
+		exit(0);
+	}
+	else {
+		return;
 
 	}
+}
+
 

@@ -1,6 +1,13 @@
 /* Author: Jason Jay Dookarun
-With the inspiration of parrallel realities concept of a homescreen, the following file consists of a homepage creation that will be 
-displayed to the user upon running the program. 
+Date of Creation: 09.04.2020
+
+The following section has been designed as a modification to the existing software
+designed by Parallel Realities. This addition introduces a home "splash" screen to 
+greet the user to prior to their experiences of the game. Prompts and key shortcuts 
+are introduced to the user to 1) commence the game in a correct manner, and 2) to 
+provide the user with further details on the objective of the game as well as how to 
+play the game via a provided control panel. 
+
 */
 
 #include "common.h"
@@ -39,7 +46,6 @@ static void logic(void)
 	}
 	if (app.keyboard[SDL_SCANCODE_C]) {
 		messageboxC();
-
 	}
 	if (app.keyboard[SDL_SCANCODE_Q]) {
 		messageboxYesNo();

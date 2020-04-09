@@ -41,10 +41,6 @@ int WinMain(){
 
 	initGame();
 	initTitle();
-
-	
-	//initStage();
-
 	then = SDL_GetTicks();
 
 	remainder = 0;

@@ -119,8 +119,9 @@ void messageboxYesNo(void) {
 	// referenced from https://wiki.libsdl.org/SDL_ShowMessageBox#Version
 
 	const SDL_MessageBoxButtonData buttons[] = {
-	{ SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT, 0, "No" },
-	{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 1, "Yes" },
+	{ SDL_MESSAGEBOX_BUTTON_ESCAPEKEY_DEFAULT, 1, "Yes" },
+
+	{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 2, "No" },
 	};
 
 	const SDL_MessageBoxData messageboxdata = {

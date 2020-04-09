@@ -39,6 +39,8 @@ void initStage(void)
 	initMap();
 }
 
+
+
 static void logic(void)
 {
 	doPlayer();

@@ -67,4 +67,5 @@ typedef struct {
 	int map[MAP_WIDTH][MAP_HEIGHT];
 	Entity entityHead, *entityTail;
 	int pizzaTotal, pizzaFound;
+	int pizzaTotal2, pizzaFound2;
 } Stage;

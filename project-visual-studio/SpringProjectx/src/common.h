@@ -46,6 +46,7 @@ void initFonts(void);
 void initGame(void);
 void initMap(void);
 void initPizza(char *line);
+void pizzaReset(char* line);
 void initPlatform(char *line);
 void initPlayer(void);
 void initSDL(void);
@@ -56,6 +57,9 @@ void playMusic(int loop);
 void playSound(int id, int channel);
 void prepareScene(void);
 void presentScene(void);
+void loadTiles2(void);
+void loadMap2(const char* filename);
+int isInsideMap2(int x, int y);
 
 extern App app;
 

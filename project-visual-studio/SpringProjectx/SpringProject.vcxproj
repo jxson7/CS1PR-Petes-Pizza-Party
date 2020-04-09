@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="homescreen.c" />
+    <ClCompile Include="level2.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="src\block.c" />

@@ -72,6 +72,9 @@
     <ClCompile Include="homescreen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="level2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\structs.h">

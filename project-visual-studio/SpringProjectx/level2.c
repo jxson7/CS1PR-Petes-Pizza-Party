@@ -20,23 +20,24 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "common.h"
 
-static void loadTiles(void);
-static void loadMap(const char *filename);
-int isInsideMap(int x, int y);
+static void loadTiles2(void);
+static void loadMap2(const char* filename);
+int isInsideMap2(int x, int y);
 
-static SDL_Texture *tiles[MAX_TILES];
+static SDL_Texture* tiles[MAX_TILES];
 
-void initMap(void)
+void initMap2(void)
 {
+	player->x = player->y = 0;
+
 	memset(&stage.map, 0, sizeof(int) * MAP_WIDTH * MAP_HEIGHT);
 
-	loadTiles();
-
-	loadMap("data/map01.dat");
+	loadTiles2();
+	loadMap2("data/map02.dat");
 
 }
 
-void drawMap(void)
+void drawMap2(void)
 {
 	int x, y, n, x1, x2, y1, y2, mx, my;
 
@@ -49,11 +50,11 @@ void drawMap(void)
 	mx = stage.camera.x / TILE_SIZE;
 	my = stage.camera.y / TILE_SIZE;
 
-	for (y = y1 ; y < y2 ; y += TILE_SIZE)
+	for (y = y1; y < y2; y += TILE_SIZE)
 	{
-		for (x = x1 ; x < x2 ; x += TILE_SIZE)
+		for (x = x1; x < x2; x += TILE_SIZE)
 		{
-			if (isInsideMap(mx, my))
+			if (isInsideMap2(mx, my))
 			{
 				n = stage.map[mx][my];
 
@@ -72,12 +73,12 @@ void drawMap(void)
 	}
 }
 
-static void loadTiles(void)
+static void loadTiles2(void)
 {
 	int i;
 	char filename[MAX_FILENAME_LENGTH];
 
-	for (i = 1 ; i <= MAX_TILES ; i++)
+	for (i = 1; i <= MAX_TILES; i++)
 	{
 		sprintf(filename, "gfx/tile%d.png", i);
 
@@ -85,29 +86,29 @@ static void loadTiles(void)
 	}
 }
 
-static void loadMap(const char *filename)
+static void loadMap2(const char* filename)
 {
-	char *data, *p;
+	char* data, * p;
 	int x, y;
 
 	data = readFile(filename);
 
 	p = data;
 
-	for (y = 0 ; y < MAP_HEIGHT ; y++)
+	for (y = 0; y < MAP_HEIGHT; y++)
 	{
-		for (x = 0 ; x < MAP_WIDTH ; x++)
+		for (x = 0; x < MAP_WIDTH; x++)
 		{
 			sscanf(p, "%d", &stage.map[x][y]);
 
-			do {p++;} while (*p != ' ' && *p != '\n');
+			do { p++; } while (*p != ' ' && *p != '\n');
 		}
 	}
 
 	free(data);
 }
 
-int isInsideMap(int x, int y)
+int isInsideMap2(int x, int y)
 {
 	return x >= 0 && y >= 0 && x < MAP_WIDTH && y < MAP_HEIGHT;
 }

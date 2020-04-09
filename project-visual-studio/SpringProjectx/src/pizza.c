@@ -45,6 +45,8 @@ void initPizza(char *line)
 	stage.pizzaTotal++;
 }
 
+
+
 static void tick(void)
 {
 	self->value += 0.1;
@@ -62,8 +64,13 @@ static void touch(Entity *other)
 
 		if (stage.pizzaFound == stage.pizzaTotal)
 		{
-			playSound(SND_PIZZA_DONE, CH_PIZZA);
-			exit(1);
+			initMap2();
+
+
+
+			stage.pizzaFound = 0;
+
+
 		}
 		else
 		{

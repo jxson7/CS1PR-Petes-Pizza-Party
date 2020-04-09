@@ -23,7 +23,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 static void logic(void);
 static void draw(void);
 static void drawHud(void);
-static void drawTimer(void);
+//static void drawTimer(void);
 
 
 
@@ -31,24 +31,18 @@ void initStage(void)
 {
 	app.delegate.logic = logic;
 	app.delegate.draw = draw;
-
 	memset(&stage, 0, sizeof(Stage));
 
 	stage.entityTail = &stage.entityHead;
-
 	initEntities();
-
 	initPlayer();
-
 	initMap();
 }
 
 static void logic(void)
 {
 	doPlayer();
-
 	doEntities();
-
 	doCamera();
 }
 
@@ -63,7 +57,7 @@ static void draw(void)
 
 	drawHud();
 
-	drawTimer();
+	//drawTimer();
 
 }
 
@@ -84,9 +78,9 @@ static void drawHud(void)
 	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
 }
 
-static void drawTimer(void)
-{
+//static void drawTimer(void)
+//{
 	
-	drawText(SCREEN_WIDTH - 1080, 5, 255, 255, 255, TEXT_RIGHT, "TIMER %d/%d",stage.pizzaFound,stage.pizzaTotal);
+	//drawText(SCREEN_WIDTH - 1080, 5, 255, 255, 255, TEXT_RIGHT, "TIMER %d/%d",stage.pizzaFound,stage.pizzaTotal);
 
-}
+//}

@@ -67,7 +67,7 @@ void drawText(int x, int y, int r, int g, int b, int align, char *format, ...)
 		{
 			rect.x = (c - ' ') * GLYPH_WIDTH;
 
-			blitRect(fontTexture, &rect, x, y);
+			loadText(fontTexture, &rect, x, y);
 
 			x += GLYPH_WIDTH;
 		}

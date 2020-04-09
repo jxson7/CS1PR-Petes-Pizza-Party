@@ -48,7 +48,7 @@ void blit(SDL_Texture *texture, int x, int y, int center)
 	SDL_RenderCopy(app.renderer, texture, NULL, &dest);
 }
 
-void blitRect(SDL_Texture *texture, SDL_Rect *src, int x, int y)
+void loadText(SDL_Texture *texture, SDL_Rect *src, int x, int y)
 {
 	SDL_Rect dest;
 

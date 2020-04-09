@@ -15,3 +15,4 @@ Elements that have been added:
 - Help and Welcome Panel for UI start
 - Exit prompt for UI via messagebox
 - Level 2 successfully loaded, without pizza
+- Addition of audio for intro and main gameplay

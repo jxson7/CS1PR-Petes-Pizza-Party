@@ -14,3 +14,4 @@ Elements that have been added:
 - Quit option via q
 - Help and Welcome Panel for UI start
 - Exit prompt for UI via messagebox
+- Level 2 successfully loaded, without pizza

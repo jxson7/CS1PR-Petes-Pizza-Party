@@ -30,7 +30,6 @@ static void drawHud(void);
 void initStage(void)
 {
 	initFonts();
-
 	initSounds();
 	loadMusic("music/one_0.mp3");
 	playMusic(1);
@@ -59,9 +58,7 @@ static void draw(void)
 	SDL_RenderFillRect(app.renderer, NULL);
 
 	drawMap();
-
 	drawEntities();
-
 	drawHud();
 
 	//drawTimer();

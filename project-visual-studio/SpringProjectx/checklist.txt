@@ -1,0 +1,14 @@
+To Do List
+// Components in Brackets are optional 
+- (Adding Timer hub)
+- Adding new controls for user (COMPLETED)
+- Adding a help command button (bottom right for user support) (COMPLETED)
+- Changing background 
+- (New Level)
+
+
+Elements that have been added:
+- UpDownLeftRight commands
+- New Main Menu
+- Help Command
+- Quit option via q

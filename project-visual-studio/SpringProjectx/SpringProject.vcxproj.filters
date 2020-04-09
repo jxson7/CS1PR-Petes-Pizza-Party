@@ -93,7 +93,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="todo.txt">
+    <Text Include="checklist.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

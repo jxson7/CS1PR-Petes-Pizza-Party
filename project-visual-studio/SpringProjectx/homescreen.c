@@ -39,6 +39,8 @@ static void logic(void)
 	}
 
 	if (app.keyboard[SDL_SCANCODE_SPACE]){
+		Mix_HaltChannel(-1);
+
 		initStage();
 	}
 	if (app.keyboard[SDL_SCANCODE_H]) {
@@ -75,7 +77,8 @@ static void draw(void)
 	loadText(logo, &r, (SCREEN_WIDTH / 2) - (r.w / 2), 250);
 	drawText(SCREEN_WIDTH / 2, 450, 255, 255, 255, TEXT_CENTER, "PRESS SPACE TO PLAY!");
 	drawText(SCREEN_WIDTH / 2, 500, 255, 255, 255, TEXT_CENTER, "PRESS C FOR CONTROLS");
-	drawText(SCREEN_WIDTH / 2, 550, 255, 255, 255, TEXT_CENTER, "PRESS H FOR CONTROLS AND HELP");
+	drawText(SCREEN_WIDTH / 2, 550, 255, 255, 255, TEXT_CENTER, "PRESS H FOR HELP");
+	
 }
 
 void initTitle(void)
@@ -84,6 +87,8 @@ void initTitle(void)
 	app.delegate.draw = draw;
 	background = loadTexture("gfx/backgroundNew.png");
 	logo = loadTexture("gfx/logo.png");
+	loadMusic("music/kr.mp3");
+	playMusic(1);
 }
 
 void messageboxH(void) {

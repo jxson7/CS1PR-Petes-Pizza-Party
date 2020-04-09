@@ -29,6 +29,11 @@ static void drawHud(void);
 
 void initStage(void)
 {
+	initFonts();
+
+	initSounds();
+	loadMusic("music/one_0.mp3");
+	playMusic(1);
 	app.delegate.logic = logic;
 	app.delegate.draw = draw;
 	memset(&stage, 0, sizeof(Stage));

@@ -24,7 +24,9 @@ static void capFrameRate(long* then, float* remainder);
 
 char* global_dir = "C:\\Users\\di918039\\source\\repos\\cs1pr-portfolio\\project-visual-studio\\SpringProject";
 
+
 int WinMain(){
+	Colnitialize(1);
 	long then;
 	float remainder;
 
@@ -62,6 +64,9 @@ int WinMain(){
 
 	return 0;
 }
+
+Colnitialize();
+
 
 
 static void capFrameRate(long* then, float* remainder)

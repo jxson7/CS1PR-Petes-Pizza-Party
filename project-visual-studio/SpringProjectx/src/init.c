@@ -57,13 +57,13 @@ void initSDL(void)
 
 void initGame(void)
 {
+	Mix_HaltMusic();
 	initFonts();
 
 	initSounds();
 
 	loadMusic("music/one_0.mp3");
-
-	//playMusic(1);
+	playMusic(1);
 }
 
 void cleanup(void)

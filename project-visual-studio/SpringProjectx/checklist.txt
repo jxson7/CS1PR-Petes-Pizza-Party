@@ -12,3 +12,5 @@ Elements that have been added:
 - New Main Menu
 - Help Command
 - Quit option via q
+- Help and Welcome Panel for UI start
+- Exit prompt for UI via messagebox

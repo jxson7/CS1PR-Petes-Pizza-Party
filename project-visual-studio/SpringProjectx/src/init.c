@@ -42,7 +42,7 @@ void initSDL(void)
 
     Mix_AllocateChannels(MAX_SND_CHANNELS);
 
-	app.window = SDL_CreateWindow("Pete's Pizza Delivery", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, windowFlags);
+	app.window = SDL_CreateWindow("Pete's Pizza Hunt", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, windowFlags);
 
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 
@@ -61,7 +61,7 @@ void initGame(void)
 
 	loadMusic("music/one_0.mp3");
 
-	playMusic(1);
+	//playMusic(1);
 }
 
 void cleanup(void)

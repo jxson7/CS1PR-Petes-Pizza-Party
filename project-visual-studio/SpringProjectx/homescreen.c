@@ -92,11 +92,44 @@ void initTitle(void)
 }
 
 void messageboxH(void) {
-	SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, "Welcome!" ,"Hi and welcome To Pete's Pizza Hunt! We have lost 11 slices of pizza and your mission is to find them! To check your progress, look at the HUD on top right-hand side. Good luck!", NULL);
+
+	// referenced from https://wiki.libsdl.org/SDL_ShowMessageBox#Version
+
+	const SDL_MessageBoxButtonData buttons[] = {
+	{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 0, "OK" },
+	};
+
+	const SDL_MessageBoxData messageboxdata = {
+		SDL_MESSAGEBOX_INFORMATION,NULL,"Welcome!","Hi and welcome To Pete's Pizza Hunt! We have lost 11 slices of pizza and your mission is to find them! To check your progress, look at the HUD on top right-hand side. Good luck!",SDL_arraysize(buttons),buttons };
+	int buttonid;
+	if (SDL_ShowMessageBox(&messageboxdata, &buttonid) < 0) {
+		SDL_Log("error displaying message box");
+		return 1;
+	}
+	if (buttonid == 0) {
+		return;
+	}
+
 }
 
 void messageboxC(void) {
-	SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_INFORMATION, "Controls", " Left: LEFT Key or A, Right : RIGHT Key, Jump: SPACE or W, Reset: R, Quit: Q.", NULL);
+	// referenced from https://wiki.libsdl.org/SDL_ShowMessageBox#Version
+
+	const SDL_MessageBoxButtonData buttons[] = {
+	{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 0, "OK" },
+	};
+
+	const SDL_MessageBoxData messageboxdata = {
+		SDL_MESSAGEBOX_INFORMATION,NULL,"Controls","Left: LEFT Key or A, Right : RIGHT Key, Jump : SPACE or W, Reset : R, Quit : Q.",SDL_arraysize(buttons),buttons };
+	int buttonid;
+	if (SDL_ShowMessageBox(&messageboxdata, &buttonid) < 0) {
+		SDL_Log("error displaying message box");
+		return 1;
+	}
+	if (buttonid == 0) {
+		return;
+	}
+
 
 }
 

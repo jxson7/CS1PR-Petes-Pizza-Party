@@ -1,15 +1,7 @@
-﻿  homescreen.c
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\homescreen.c(107,11): warning C4098: 'messageboxH': 'void' function returning a value
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\homescreen.c(127,11): warning C4098: 'messageboxC': 'void' function returning a value
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\homescreen.c(149,11): warning C4098: 'messageboxYesNo': 'void' function returning a value
-  LINK : 0 new modules and 1 (out of 57) modules have changed since prior linking
-  LINK : padding exhausted (3): performing full link
-  
-  Invoking LINK.EXE:
-   /ERRORREPORT:PROMPT @C:\Users\jason\AppData\Local\Temp\tmp295834f50d0f43fab6053e08e9fcab50.rsp
-   /nologo
-   /incremental
-   /fullbuild
+﻿  main.c
+C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\main.c(42,11): warning C4013: 'initOutro' undefined; assuming extern returning int
+C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\main.c(75,24): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
+C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\main.c(90,21): warning C4305: '+=': truncation from 'double' to 'float'
   
   Starting pass 1
   Processed /DEFAULTLIB:MSVCRTD
@@ -32,22 +24,26 @@ C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProj
       Searching C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\\SDL2\lib\sdl2.lib:
         Found SDL_Log
           Referenced in homescreen.obj
+          Referenced in outro.obj
           Referenced in player.obj
           Loaded sdl2.lib(SDL2.dll)
         Found SDL_ShowMessageBox
           Referenced in homescreen.obj
+          Referenced in outro.obj
           Referenced in player.obj
           Loaded sdl2.lib(SDL2.dll)
         Found SDL_QueryTexture
+          Referenced in pizza.obj
           Referenced in platform.obj
           Referenced in player.obj
           Referenced in homescreen.obj
+          Referenced in outro.obj
           Referenced in block.obj
           Referenced in draw.obj
-          Referenced in pizza.obj
           Loaded sdl2.lib(SDL2.dll)
         Found SDL_RenderCopy
           Referenced in homescreen.obj
+          Referenced in outro.obj
           Referenced in draw.obj
           Loaded sdl2.lib(SDL2.dll)
         Found SDL_GetTicks
@@ -153,6 +149,7 @@ C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProj
       Searching C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\\SDL2\lib\sdl2_mixer.lib:
         Found Mix_HaltChannel
           Referenced in homescreen.obj
+          Referenced in outro.obj
           Loaded sdl2_mixer.lib(SDL2_mixer.dll)
         Found Mix_OpenAudio
           Referenced in init.obj
@@ -210,116 +207,122 @@ C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProj
       Searching C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\\SDL2\lib\sdl2_ttf.lib:
       Searching C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\lib\x64\MSVCRTD.lib:
         Found _RTC_CheckStackVars
+          Referenced in player.obj
           Referenced in sound.obj
           Referenced in stage.obj
           Referenced in text.obj
+          Referenced in input.obj
           Referenced in map.obj
           Referenced in pizza.obj
           Referenced in platform.obj
-          Referenced in player.obj
+          Referenced in block.obj
           Referenced in draw.obj
           Referenced in entities.obj
           Referenced in init.obj
-          Referenced in input.obj
           Referenced in homescreen.obj
           Referenced in level2.obj
           Referenced in main.obj
-          Referenced in block.obj
+          Referenced in outro.obj
           Loaded MSVCRTD.lib(stack.obj)
         Found _RTC_InitBase
+          Referenced in stage.obj
           Referenced in text.obj
           Referenced in textures.obj
           Referenced in util.obj
+          Referenced in pizza.obj
           Referenced in platform.obj
           Referenced in player.obj
           Referenced in sound.obj
-          Referenced in stage.obj
+          Referenced in init.obj
           Referenced in input.obj
           Referenced in io.obj
           Referenced in map.obj
-          Referenced in pizza.obj
+          Referenced in block.obj
           Referenced in camera.obj
           Referenced in draw.obj
           Referenced in entities.obj
-          Referenced in init.obj
           Referenced in homescreen.obj
           Referenced in level2.obj
           Referenced in main.obj
-          Referenced in block.obj
+          Referenced in outro.obj
           Loaded MSVCRTD.lib(init.obj)
         Found __CheckForDebuggerJustMyCode
+          Referenced in stage.obj
           Referenced in text.obj
           Referenced in textures.obj
           Referenced in util.obj
+          Referenced in pizza.obj
           Referenced in platform.obj
           Referenced in player.obj
           Referenced in sound.obj
-          Referenced in stage.obj
+          Referenced in init.obj
           Referenced in input.obj
           Referenced in io.obj
           Referenced in map.obj
-          Referenced in pizza.obj
+          Referenced in block.obj
           Referenced in camera.obj
           Referenced in draw.obj
           Referenced in entities.obj
-          Referenced in init.obj
           Referenced in homescreen.obj
           Referenced in level2.obj
           Referenced in main.obj
-          Referenced in block.obj
+          Referenced in outro.obj
           Loaded MSVCRTD.lib(debugger_jmc.obj)
         Found __GSHandlerCheck
+          Referenced in player.obj
           Referenced in sound.obj
           Referenced in stage.obj
           Referenced in text.obj
+          Referenced in input.obj
           Referenced in map.obj
           Referenced in pizza.obj
           Referenced in platform.obj
-          Referenced in player.obj
+          Referenced in block.obj
           Referenced in draw.obj
           Referenced in entities.obj
           Referenced in init.obj
-          Referenced in input.obj
           Referenced in homescreen.obj
           Referenced in level2.obj
           Referenced in main.obj
-          Referenced in block.obj
+          Referenced in outro.obj
           Loaded MSVCRTD.lib(gshandler.obj)
         Found __security_check_cookie
+          Referenced in MSVCRTD.lib(gshandler.obj)
+          Referenced in player.obj
           Referenced in sound.obj
           Referenced in stage.obj
           Referenced in text.obj
-          Referenced in MSVCRTD.lib(gshandler.obj)
+          Referenced in input.obj
           Referenced in map.obj
           Referenced in pizza.obj
           Referenced in platform.obj
-          Referenced in player.obj
+          Referenced in block.obj
           Referenced in draw.obj
           Referenced in entities.obj
           Referenced in init.obj
-          Referenced in input.obj
           Referenced in homescreen.obj
           Referenced in level2.obj
           Referenced in main.obj
-          Referenced in block.obj
+          Referenced in outro.obj
           Loaded MSVCRTD.lib(amdsecgs.obj)
         Found __security_cookie
+          Referenced in MSVCRTD.lib(amdsecgs.obj)
+          Referenced in player.obj
           Referenced in sound.obj
           Referenced in stage.obj
           Referenced in text.obj
-          Referenced in MSVCRTD.lib(amdsecgs.obj)
+          Referenced in input.obj
           Referenced in map.obj
           Referenced in pizza.obj
           Referenced in platform.obj
-          Referenced in player.obj
+          Referenced in block.obj
           Referenced in draw.obj
           Referenced in entities.obj
           Referenced in init.obj
-          Referenced in input.obj
           Referenced in homescreen.obj
           Referenced in level2.obj
           Referenced in main.obj
-          Referenced in block.obj
+          Referenced in outro.obj
           Loaded MSVCRTD.lib(gs_cookie.obj)
         Found _fltused
           Referenced in platform.obj
@@ -487,10 +490,11 @@ C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProj
           Loaded vcruntimed.lib(VCRUNTIME140D.dll)
       Searching C:\Program Files (x86)\Windows Kits\10\lib\10.0.18362.0\ucrt\x64\ucrtd.lib:
         Found __imp_exit
+          Referenced in player.obj
           Referenced in homescreen.obj
+          Referenced in outro.obj
           Referenced in init.obj
           Referenced in input.obj
-          Referenced in player.obj
           Loaded ucrtd.lib(ucrtbased.dll)
         Found __imp_free
           Referenced in level2.obj
@@ -906,27 +910,27 @@ C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProj
    /v
    /x
    /fo
-   "C:\Users\jason\AppData\Local\Temp\lnk{8EFDBE61-FBE0-4C20-8F5F-9B2539EE0C9B}.tmp"
-   "C:\Users\jason\AppData\Local\Temp\lnk{2467BA14-CB0D-4491-A31F-5EE82352F3C3}.tmp"
+   "C:\Users\jason\AppData\Local\Temp\lnk{DDC37424-C66A-4194-BDC8-5E70ADD121ED}.tmp"
+   "C:\Users\jason\AppData\Local\Temp\lnk{D17F0675-CFB9-461A-8A69-8B7F2553731D}.tmp"
   Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
   
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
   
-  Creating C:\Users\jason\AppData\Local\Temp\lnk{8EFDBE61-FBE0-4C20-8F5F-9B2539EE0C9B}.tmp
+  Creating C:\Users\jason\AppData\Local\Temp\lnk{DDC37424-C66A-4194-BDC8-5E70ADD121ED}.tmp
   
   Using codepage 1252 as default
   
-  C:\Users\jason\AppData\Local\Temp\lnk{2467BA14-CB0D-4491-A31F-5EE82352F3C3}.tmp.
+  C:\Users\jason\AppData\Local\Temp\lnk{D17F0675-CFB9-461A-8A69-8B7F2553731D}.tmp.
   Writing 24:1,	lang:0x409,	size 381
   
   Invoking cvtres.exe:
    /machine:amd64
    /verbose
-   /out:"C:\Users\jason\AppData\Local\Temp\lnk{33207624-1033-484C-A454-E6A103F56566}.tmp"
+   /out:"C:\Users\jason\AppData\Local\Temp\lnk{FF05ED93-7240-49DF-8680-C78B1FB66C49}.tmp"
    /readonly
    "x64\Debug\SpringProject.res"
-   "C:\Users\jason\AppData\Local\Temp\lnk{8EFDBE61-FBE0-4C20-8F5F-9B2539EE0C9B}.tmp"
+   "C:\Users\jason\AppData\Local\Temp\lnk{DDC37424-C66A-4194-BDC8-5E70ADD121ED}.tmp"
   Microsoft (R) Windows Resource To Object Converter Version 14.24.28314.0
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
@@ -968,6 +972,7 @@ C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProj
        camera.obj
        block.obj
        Source.obj
+       outro.obj
        main.obj
        level2.obj
        homescreen.obj

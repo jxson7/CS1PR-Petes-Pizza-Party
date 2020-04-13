@@ -64,11 +64,11 @@ static void touch(Entity *other)
 
 		if (stage.pizzaFound == stage.pizzaTotal)
 		{
-			initMap2();
+			playSound(SND_PIZZA_DONE, CH_PIZZA);
+			initOutro();
 
-
-
-			stage.pizzaFound = 0;
+			//initMap2();
+			//stage.pizzaFound = 0;
 
 
 		}

@@ -26,7 +26,6 @@ char* global_dir = "C:\\Users\\di918039\\source\\repos\\cs1pr-portfolio\\project
 
 
 int WinMain(){
-	Colnitialize(1);
 	long then;
 	float remainder;
 
@@ -38,8 +37,6 @@ int WinMain(){
 	initSDL();
 
 	atexit(cleanup);
-
-	
 
 	initGame();
 	initTitle();
@@ -65,7 +62,6 @@ int WinMain(){
 	return 0;
 }
 
-Colnitialize();
 
 
 

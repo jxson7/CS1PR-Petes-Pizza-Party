@@ -3,8 +3,10 @@ To Do List
 - (Adding Timer hub)
 - Adding new controls for user (COMPLETED)
 - Adding a help command button (bottom right for user support) (COMPLETED)
-- Changing background 
+- Changing background (COMPLETED)
 - (New Level)
+- Implement outro sequence ( with play again mechansism or exit) (COMPLETED)
+- (add enemies)
 
 
 Elements that have been added:
@@ -16,3 +18,4 @@ Elements that have been added:
 - Exit prompt for UI via messagebox
 - Level 2 successfully loaded, without pizza
 - Addition of audio for intro and main gameplay
+- Outro sequence for game completion

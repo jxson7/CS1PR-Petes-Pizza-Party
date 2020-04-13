@@ -32,7 +32,7 @@ void initOutro(void)
 	app.delegate.logic = logic;
 	app.delegate.draw = draw;
 	background = loadTexture("gfx/outro.png");
-	//logo = loadTexture("gfx/logo.png");
+	logo = loadTexture("gfx/missionaccomplished.png");
 	//loadMusic("music/.mp3");
 	//playMusic(1);
 }

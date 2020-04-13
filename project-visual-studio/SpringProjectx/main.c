@@ -25,11 +25,11 @@ static void capFrameRate(long* then, float* remainder);
 char* global_dir = "C:\\Users\\di918039\\source\\repos\\cs1pr-portfolio\\project-visual-studio\\SpringProject";
 
 
-int WinMain(){
+int WinMain() {
 	long then;
 	float remainder;
 
-	
+
 
 	memset(&app, 0, sizeof(App));
 	app.textureTail = &app.textureHead;

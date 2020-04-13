@@ -23,8 +23,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 static void logic(void);
 static void draw(void);
 static void drawHud(void);
-//static void drawTimer(void);
+static void drawSupport(void);
 
+static void messageboxC(void);
 
 
 void initStage(void)
@@ -50,6 +51,10 @@ static void logic(void)
 	doPlayer();
 	doEntities();
 	doCamera();
+
+	if (app.keyboard[SDL_SCANCODE_C]) {
+		messageboxC();
+	}
 }
 
 static void draw(void)
@@ -61,7 +66,7 @@ static void draw(void)
 	drawEntities();
 	drawHud();
 
-	//drawTimer();
+	drawSupport();
 
 }
 
@@ -82,9 +87,32 @@ static void drawHud(void)
 	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
 }
 
-//static void drawTimer(void)
-//{
-	
-	//drawText(SCREEN_WIDTH - 1080, 5, 255, 255, 255, TEXT_RIGHT, "TIMER %d/%d",stage.pizzaFound,stage.pizzaTotal);
+static void drawSupport(void)
+{
 
-//}
+	
+drawText(SCREEN_WIDTH -670 , 5, 255, 255, 255, TEXT_RIGHT, "PRESS R:RESET, Q:QUIT, C:CONTROLS");
+
+}
+
+
+void messageboxC(void) {
+	// referenced from https://wiki.libsdl.org/SDL_ShowMessageBox#Version
+
+	const SDL_MessageBoxButtonData buttons[] = {
+	{ SDL_MESSAGEBOX_BUTTON_RETURNKEY_DEFAULT, 0, "OK" },
+	};
+
+	const SDL_MessageBoxData messageboxdata = {
+		SDL_MESSAGEBOX_INFORMATION,NULL,"Controls","Left: LEFT Key or A, Right : RIGHT Key, Jump : SPACE or W, Reset : R, Quit : Q.",SDL_arraysize(buttons),buttons };
+	int buttonid;
+	if (SDL_ShowMessageBox(&messageboxdata, &buttonid) < 0) {
+		SDL_Log("error displaying message box");
+		return 1;
+	}
+	if (buttonid == 0) {
+		return;
+	}
+
+
+}

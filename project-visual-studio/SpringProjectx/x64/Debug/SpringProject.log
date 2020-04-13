@@ -1,20 +1,8 @@
-﻿  main.c
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\main.c(42,11): warning C4013: 'initTitle' undefined; assuming extern returning int
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\main.c(72,24): warning C4244: '=': conversion from 'float' to 'long', possible loss of data
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\main.c(87,21): warning C4305: '+=': truncation from 'double' to 'float'
-  outro.c
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\outro.c(50,12): warning C4013: 'initTitle' undefined; assuming extern returning int
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\outro.c(99,11): warning C4098: 'messageboxYesNo': 'void' function returning a value
-  pizza.c
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\src\pizza.c(52,20): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\src\pizza.c(54,29): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\src\pizza.c(68,13): warning C4013: 'initOutro' undefined; assuming extern returning int
-  Generating Code...
-  LINK : 0 new modules and 3 (out of 58) modules have changed since prior linking
+﻿  stage.c
+C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\src\stage.c(111,11): warning C4098: 'messageboxC': 'void' function returning a value
+  LINK : 0 new modules and 1 (out of 58) modules have changed since prior linking
   Starting pass 2
-       pizza.obj
-       outro.obj
-       main.obj
+       stage.obj
        MSVCRTD.lib(loadcfg.obj)
   Finished pass 2
   SpringProject.vcxproj -> C:\Users\jason\UoR\Y1\Programming\SpringProject\project-visual-studio\SpringProjectx\x64\Debug\SpringProject.exe

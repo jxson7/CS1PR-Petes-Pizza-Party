@@ -43,7 +43,8 @@ void initPlayer(void)
 	SDL_QueryTexture(player->texture, NULL, NULL, &player->w, &player->h);
 }
 
-
+/* the section below implements the new commands for controlling the entity with appropriate control gestures such as WASD or UpDownLeftRight and SPACE
+*/
 void doPlayer(void)
 {
 	player->dx = 0;

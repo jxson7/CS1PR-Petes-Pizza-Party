@@ -54,7 +54,7 @@ void initSDL(void)
 
 	SDL_ShowCursor(1);
 }
-
+// implements playing audio
 void initGame(void)
 {
 	Mix_HaltMusic();

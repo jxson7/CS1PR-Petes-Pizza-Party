@@ -72,9 +72,6 @@
     <ClCompile Include="homescreen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="level2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="outro.c">
       <Filter>Source Files</Filter>
     </ClCompile>

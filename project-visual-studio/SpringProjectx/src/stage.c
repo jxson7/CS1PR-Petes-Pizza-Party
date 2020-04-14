@@ -95,7 +95,8 @@ drawText(SCREEN_WIDTH -670 , 5, 255, 255, 255, TEXT_RIGHT, "PRESS R:RESET, Q:QUI
 
 }
 
-
+/* similar to previous sections, implements a constant run of command prompts for the user
+*/
 void messageboxC(void) {
 	// referenced from https://wiki.libsdl.org/SDL_ShowMessageBox#Version
 

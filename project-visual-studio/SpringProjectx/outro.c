@@ -58,7 +58,6 @@ static void logic(void)
 	if (app.keyboard[SDL_SCANCODE_Q]) {
 		messageboxYesNo();
 	}
-
 }
 
 /* This draw mechanism has been referenced from homescreen.c, map.c and Parallel Realities (link above). This method allows the

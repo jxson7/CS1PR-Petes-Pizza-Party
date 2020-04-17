@@ -114,6 +114,4 @@ void messageboxC(void) {
 	if (buttonid == 0) {
 		return;
 	}
-
-
 }

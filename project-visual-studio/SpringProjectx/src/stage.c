@@ -24,6 +24,8 @@ static void logic(void);
 static void draw(void);
 static void drawHud(void);
 static void drawSupport(void);
+static void drawTimer(void);
+
 
 static void messageboxC(void);
 
@@ -65,6 +67,7 @@ static void draw(void)
 	drawMap();
 	drawEntities();
 	drawHud();
+	drawTimer();
 
 	drawSupport();
 
@@ -84,15 +87,16 @@ static void drawHud(void)
 	SDL_RenderFillRect(app.renderer, &r);
 	SDL_SetRenderDrawBlendMode(app.renderer, SDL_BLENDMODE_NONE);
 
-	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
+	drawText(SCREEN_WIDTH - 500, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
 }
 
 static void drawSupport(void)
 {
+drawText(SCREEN_WIDTH -780 , 5, 255, 255, 255, TEXT_RIGHT, "PRESS R:RESET, Q:QUIT, C:CONTROLS");
+}
 
-	
-drawText(SCREEN_WIDTH -670 , 5, 255, 255, 255, TEXT_RIGHT, "PRESS R:RESET, Q:QUIT, C:CONTROLS");
-
+static void drawTimer(void) {	
+	drawText(SCREEN_WIDTH -5, 5, 255, 255, 255, TEXT_RIGHT, "TIME :%2d SECONDS", SDL_GetTicks() / 1000);
 }
 
 /* similar to previous sections, implements a constant run of command prompts for the user
@@ -115,3 +119,4 @@ void messageboxC(void) {
 		return;
 	}
 }
+
